@@ -104,14 +104,8 @@ DEPENDENCIES
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sqlite3
-<<<<<<< HEAD
   thin
 
 BUNDLED WITH
    2.2.22
-=======
   thin (~> 1.8)
-
-BUNDLED WITH
-   2.3.24
->>>>>>> dev
