@@ -91,6 +91,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 6.1)
   database_cleaner (~> 2.0)
+  eventmachine (= 1.2.7)
   pry (~> 0.14.1)
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
@@ -103,7 +104,8 @@ DEPENDENCIES
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sqlite3
-  thin (~> 1.8)
+  thin
 
 BUNDLED WITH
-   2.3.24
+   2.2.22
+  thin (~> 1.8)
