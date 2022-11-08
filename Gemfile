@@ -6,7 +6,9 @@ gem "sinatra", "~> 2.1"
 
 # A fast and simple web server
 # https://github.com/macournoyer/thin
-gem "thin", "~> 1.8"
+gem 'eventmachine',"1.2.7"
+
+gem "thin"
 
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
@@ -44,7 +46,10 @@ group :development do
 
 end
 
+<<<<<<< HEAD
 gem "faker"
+=======
+>>>>>>> dev
 
 # These gems will only be used when we are running tests
 group :test do
