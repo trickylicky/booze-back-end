@@ -6,7 +6,9 @@ gem "sinatra", "~> 2.1"
 
 # A fast and simple web server
 # https://github.com/macournoyer/thin
-gem "thin", "~> 1.8"
+gem 'eventmachine',"1.2.7"
+
+gem "thin"
 
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
@@ -29,7 +31,9 @@ gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
-gem "sqlite3", "~> 1.4"
+gem "sqlite3"
+
+
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
@@ -42,6 +46,7 @@ group :development do
   # https://github.com/alexch/rerun
   gem "rerun"
 end
+
 
 # These gems will only be used when we are running tests
 group :test do
