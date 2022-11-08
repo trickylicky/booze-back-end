@@ -32,8 +32,11 @@ gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
 gem "sqlite3"
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> dev
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
