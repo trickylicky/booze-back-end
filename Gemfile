@@ -41,7 +41,10 @@ group :development do
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
+
 end
+
+gem "faker"
 
 # These gems will only be used when we are running tests
 group :test do
