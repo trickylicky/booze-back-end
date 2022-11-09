@@ -8,12 +8,12 @@ class ApplicationController < Sinatra::Base
   
   get '/liquors' do
      liquors = Liquor.all.order(:title).limit(6)
-     products.to_json
+     liquors.to_json
   end
 
   get '/liquors/:id' do
     liquor = Liquor.find(params[:id])
-    products.to_json(only: [:id, :title, :price, :category], include: {
+    liquor.to_json(only: [:id, :title, :price, :category, :description, :image_url], include: {
       reviews: {only: [:rating, :comment], include: {
         User: {only: [:name]}
       }}
@@ -42,6 +42,13 @@ class ApplicationController < Sinatra::Base
     review.destroy
     review.to_json
    end
+
+
+   
+
+
+
+   
 
 
 
