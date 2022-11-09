@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   
   get '/liquors' do
      liquors = Liquor.all.order(:title).limit(6)
-     products.to_json
+     liquors.to_json
   end
 
   get '/liquors/:id' do
@@ -42,6 +42,9 @@ class ApplicationController < Sinatra::Base
     review.destroy
     review.to_json
    end
+
+
+   
 
 
 
