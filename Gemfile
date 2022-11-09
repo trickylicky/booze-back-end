@@ -46,10 +46,7 @@ group :development do
 
 end
 
-<<<<<<< HEAD
 gem "faker"
-=======
->>>>>>> dev
 
 # These gems will only be used when we are running tests
 group :test do

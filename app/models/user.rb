@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
     has_many :reviews
-    has_many :products, through: :reviews
+    has_many :liquors, through: :reviews
 
 
     def delete_review(product)
         self.review.map do |review|
-            if  review.product id == product.id
+            if  review.liquor.id == liquor.id
                 review.destroy
     
             end

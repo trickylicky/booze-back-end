@@ -1,9 +1,9 @@
 class Review < ActiveRecord::Base
+    belongs_to :liquors
     belongs_to :users
-    belongs_to :products
 
 def showws_review
- "Review for #{self.product.name} by #{self.user.name}: #{ self.star_rating}. #{self.comment}"
+ "Review for #{self.liquor.name} by #{self.user.name}: #{ self.rating}. #{self.comment}"
 end
 
 
