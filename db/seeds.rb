@@ -1,17 +1,15 @@
 puts "🌱 Seeding spices..."
 
-
-# product.create(product_name: 'SpaceX')
-# response = RestClient.get ' https://liqour-store.herokuapp.com'
-# products = JSON.parse(response)
-# products.each do |product|
-#    new_launch = Launch.create(
-#         name: product['name'],
-#         image: product['image'],
-#         rating: product['rating'],
-#         category: product['category']
-#         description: product['description'],
-#         company_id: 1,
-#     )
-# end
+liqour.create(liquor_name: 'liquor')
+response = RestClient.get 'https://liquor-data.herokuapp.com/liquor'
+liquor = JSON.parse(response)
+liqour.each do |liqour|
+   new_liquor = Launch.create(
+        name: liqour['name'],
+        image: liqour['image'],
+        rating: liqour['rating'],
+        category: liqour['category']
+        description: liqour['description'],
+    )
+end
 puts "✅ Done seeding!"
