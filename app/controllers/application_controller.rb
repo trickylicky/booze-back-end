@@ -6,15 +6,21 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
   
-  # get '/products' do
-  #    products = Product.all.ordet(:name.limit(6))
-  #    products.to_json
-  # end
+  get '/liquors' do
+     liquors = Liquor.all.ordet(:title.limit(6))
+     products.to_json
+  end
 
-  # get '/products/id' do
-  #   product = Product.find(params[:id])
-  #   products.to_json(only: [:id, :name, :price, :category])
-  # end
+  get '/liquors/id' do
+    liquor = Liquor.find(params[:id])
+    products.to_json(only: [:id, :title, :price, :category], include: {
+      reviews: {only: [:rating, :comment], include: {
+        User: {only: [:name]}
+      }}
+    })
+  end
+
+   
 
 
 
