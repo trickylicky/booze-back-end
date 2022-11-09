@@ -1,6 +1,5 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
 
 # product.create(product_name: 'SpaceX')
 # response = RestClient.get ' https://liqour-store.herokuapp.com'
