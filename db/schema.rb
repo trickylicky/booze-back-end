@@ -10,24 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_08_083824) do
-
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.integer "price"
-    t.string "categories"
-    t.string "description"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.string "comment"
-    t.integer "user_id"
-    t.integer "product_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
