@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   
   get '/liquors' do
      liquors = Liquor.all
-     liquors.to_json
+     liquors.to_json            
   end
 
   get '/liquors/:id' do
