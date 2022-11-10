@@ -1,29 +1,15 @@
 puts "🌱 Seeding spices..."
 
 
-# product.create(product_name: 'SpaceX')
-# response = RestClient.get ' https://liqour-store.herokuapp.com'
-# products = JSON.parse(response)
-# products.each do |product|
-#    new_launch = Launch.create(
-#         name: product['name'],
-#         image: product['image'],
-#         rating: product['rating'],
-#         category: product['category']
-#         description: product['description'],
-#         company_id: 1,
-#     )
-# end
-
-user1 = User.create(name: Faker::Name.name)
-liquor1 = Liquor.create(title:"Fourth street", image_url: "colour", rating: 5, category: "Wine", description: "Red wine", price: 1500 )
-
-
-
-
-
-
-
-
-
+response = RestClient.get 'https://liquor-data.herokuapp.com/liquor'
+liquor = JSON.parse(response)
+liquor.each do |liquor|
+   new_liquor = Liquor.create(
+        title: liquor['title'],
+        image_url: liquor['image'],
+        rating: liquor['rating'],
+        category: liquor['category'],
+        description: liquor['description'],
+    )
+end
 puts "✅ Done seeding!"
