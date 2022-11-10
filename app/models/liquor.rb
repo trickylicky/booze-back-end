@@ -3,4 +3,6 @@ class Liquor < ActiveRecord::Base
     has_many :users, through: :reviews
 
     
+
+    
 end
