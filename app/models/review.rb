@@ -4,7 +4,6 @@ class Review < ActiveRecord::Base
 
 
 def self.create_review(params)
-    User.find_or_create_by(name: params[:])
     Review.create(
     rating:params[:rating],
     comment: params[:comment],
