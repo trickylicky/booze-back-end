@@ -8,7 +8,6 @@ liquor.each do |liquor|
         image_url: liquor['image'],
         category: liquor['category'],
         description: liquor['description'],
-        rating: liquor['rating'],
         price: liquor['price']
     )
 end
