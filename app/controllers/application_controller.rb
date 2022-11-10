@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
         }
       }
     ) 
-    
+
   end
   # Add your routes here
   get "/" do

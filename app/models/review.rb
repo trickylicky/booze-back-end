@@ -4,11 +4,5 @@ class Review < ActiveRecord::Base
 
 def showws_review
  "Review for #{self.liquor.name} by #{self.user.name}: #{ self.rating}. #{self.comment}"
-end
-
-
-
-
-
-
+ end
 end
