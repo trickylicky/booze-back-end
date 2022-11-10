@@ -1,6 +1,5 @@
 puts "🌱 Seeding spices..."
 
-
 response = RestClient.get 'https://liquor-data.herokuapp.com/liquor'
 liquor = JSON.parse(response)
 liquor.each do |liquor|
@@ -9,6 +8,8 @@ liquor.each do |liquor|
         image_url: liquor['image'],
         category: liquor['category'],
         description: liquor['description'],
+        rating: liquor['rating'],
+        price: liquor['price']
     )
 end
 

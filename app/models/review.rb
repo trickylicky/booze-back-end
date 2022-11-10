@@ -25,14 +25,4 @@ class Review < ActiveRecord::Base
     review = Review.find(params[:id])
     review.update(comment: params[:comment], rating: params[:rating])
     end
-
-
-
-
-    
-    
-
-
-
-
 end
