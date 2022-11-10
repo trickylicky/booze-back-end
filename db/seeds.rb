@@ -14,4 +14,16 @@ puts "🌱 Seeding spices..."
 #         company_id: 1,
 #     )
 # end
+
+user1 = User.create(name: Faker::Name.name)
+liquor1 = Liquor.create(title:"Fourth street", image_url: "colour", rating: 5, category: "Wine", description: "Red wine", price: 1500 )
+
+
+
+
+
+
+
+
+
 puts "✅ Done seeding!"
