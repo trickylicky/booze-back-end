@@ -6,25 +6,26 @@ require_rel '../models/'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-    def include_liquor(object)
-    object.to_json(
-      include: {
-        liquor: {
-          only: [
-            :liquor_title
-          ]
-        }
-      }
-    ) 
+    # def include_liquor(object)
+    # object.to_json(
+    #   include: {
+    #     liquor: {
+    #       only: [
+    #         :liquor_title
+    #       ]
+    #     }
+    #   }
+    # ) 
     
-  end
+  # end
   # Add your routes here
+
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
   
   get '/liquors' do
-     liquors = Liquor.all.order(:title).limit(6)
+     liquors = Liquor.all
      liquors.to_json
   end
 
