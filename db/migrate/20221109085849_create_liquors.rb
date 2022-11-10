@@ -3,7 +3,6 @@ class CreateLiquors < ActiveRecord::Migration[6.1]
     create_table :liquors do |t|
       t.string  :title
       t.string  :image_url
-      t.integer :rating
       t.string  :category
       t.string  :description
       t.integer :price
