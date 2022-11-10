@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_11_10_074612) do
 
-  create_table "liquors", force: :cascade do |t|
-    t.string "title"
-    t.string "image_url"
-    t.integer "rating"
-    t.string "category"
-    t.string "description"
-    t.integer "price"
-  end
-
   create_table "liquors_title", force: :cascade do |t|
     t.string "liquor_title"
   end
