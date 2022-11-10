@@ -7,7 +7,7 @@ liquor.each do |liquor|
    new_liquor = Liquor.create(
         title: liquor['title'],
         image_url: liquor['image'],
-        rating: liquor['rating'],
+        # rating: liquor['rating'],
         category: liquor['category'],
         description: liquor['description'],
     )
