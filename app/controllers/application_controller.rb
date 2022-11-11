@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/liquors' do
-     liquors = Liquor.all
+     liquors = Liquor.all.limit(33)
      liquors.to_json            
   end
 
