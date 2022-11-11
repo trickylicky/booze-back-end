@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
 
 
   get '/reviews' do
-    reviews = Review.all
+    reviews = Review.all.limit(10) 
     reviews.to_json
   end
 
