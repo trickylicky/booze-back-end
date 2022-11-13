@@ -15,7 +15,6 @@ class Review < ActiveRecord::Base
         )
     end
 
-
     def self.delete_review(params)
     review = Review.find(params)
     review.destroy
