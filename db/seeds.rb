@@ -19,7 +19,7 @@ puts "Creating users..."
     )
     review = Review.create(
         rating: rand(1..5),
-        comment: Faker::Lorem.word,
+        comment: Faker::Lorem.sentence,
         user_id: user.id,
         liquor_id: rand(1..31)
     )
