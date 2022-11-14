@@ -7,11 +7,12 @@ class Review < ActiveRecord::Base
     end
 
     def self.create_review(params)
+        user = User.find_or_create_by(name: params[:name])
         Review.create(
-        rating:params[:rating],
-        comment: params[:comment],
-        liquor_id: params[:liquor_id],
-        user_id: params[:user_id]
+        rating:params[:review_data][:rating],
+        comment: params[:review_data][:comment],
+        liquor_id: params[:review_data][:liquor_id],
+        user_id: user.id
         )
     end
 
@@ -24,4 +25,5 @@ class Review < ActiveRecord::Base
     review = Review.find(params[:id])
     review.update(comment: params[:comment], rating: params[:rating])
     end
+
 end
