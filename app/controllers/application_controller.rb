@@ -4,20 +4,7 @@ require_rel '../models/'
 
 
 class ApplicationController < Sinatra::Base
-  set :default_content_type, 'application/json'
-  
-    def include_liquor(object)
-    object.to_json(
-      include: {
-        liquor: {
-          only: [
-            :liquor_title
-          ]
-        }
-      }
-    ) 
-
-  end
+  set :default_content_type, 'application/json
   # Add your routes here
 
   get "/" do
@@ -43,7 +30,6 @@ class ApplicationController < Sinatra::Base
   end
 
 
-
   post '/reviews' do 
     review = Review.create_review(params)
     review.to_json
@@ -61,7 +47,6 @@ class ApplicationController < Sinatra::Base
     review.to_json
   end
   
-
    get '/users' do
    users = User.all
    users.to_json
